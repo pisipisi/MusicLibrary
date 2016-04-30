@@ -86,9 +86,12 @@ if (($_GET['act'] == 'Download') && is_numeric($_GET['id'])) {
 		}
 		exit();
 }
-
-
+if($_COOKIE['MEDIA_TPL']) {
 $_SESSION['current_tpl'] = $_COOKIE['MEDIA_TPL'];
+} else {
+	$_SESSION['current_tpl'] = 'default';
+}
+
 
 if (!$url) {
 	//loadPage($tpl->get_tpl('main'));
