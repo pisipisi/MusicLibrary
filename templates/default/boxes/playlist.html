@@ -1,0 +1,27 @@
+                  <ul class="nav text-sm">
+                    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+                      <span class="pull-right"><a href="#"><i class="icon-plus i-lg"></i></a></span>
+                      Playlist
+                    </li>
+                    <!-- BEGIN user_block -->
+                    <!-- BEGIN playlist -->
+                    <!-- #BEGIN playlist.row -->
+                    <li>
+                      <a href="{playlist.URL}">
+                        <i class="icon-music-tone icon"></i>
+                        <b class="badge bg-success dker pull-right">-</b>
+                        <span>{playlist.TITLE}</span>
+                      </a>
+                    </li>
+                    <!-- #END playlist.row -->
+					<!-- END playlist -->
+                    <!-- END user_block -->
+                    <!-- BEGIN guest_block -->
+                    <li>
+                      <a href="index.php?act=login">
+                        <i class="icon-playlist icon text-success-lter"></i>
+                        <span>Please login</span>
+                      </a>
+                    </li>
+                    <!-- END guest_block -->
+                  </ul>

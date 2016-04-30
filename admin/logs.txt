@@ -1,0 +1,35 @@
+### 04:50:38 04-03-2016 ###
+Unable to connect to MySQL server. MySQL reported: 
+QUERY : 
+### 04:18:40 04-03-2016 ###
+Unable to connect to MySQL server. MySQL reported: 1049
+
+QUERY : 
+### 04:46:40 04-03-2016 ###
+Unable to connect to MySQL server. MySQL reported: 2005
+
+QUERY : 
+### 04:00:42 04-03-2016 ###
+Unable to connect to MySQL server. MySQL reported: 2005
+
+QUERY : 
+### 04:41:42 04-03-2016 ###
+Unable to connect to MySQL server. MySQL reported: 2005
+
+QUERY : 
+### 04:51:43 04-03-2016 ###
+Unable to connect to MySQL server. MySQL reported: 1049
+
+QUERY : 
+### 04:25:48 04-03-2016 ###
+<b>Lỗi MySQL Query</b> : 0
+QUERY : SELECT config_value FROM media_config WHERE config_name = 'web_url'
+### 02:53:06 05-03-2016 ###
+<b>Lỗi MySQL Query</b> : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'm_id'' at line 1
+QUERY : UPDATE media_data SET m_title = "title", m_singer = "singer", m_album = "album", m_cat = "cat", m_type = '1', m_width = "width", m_height = "height", m_url = "url", m_is_local = "local_url", m_lyric = "lyric", m_title_ascii = 'similarities and differences between ' WHERE m_id = '$'m_id'
+### 02:05:07 05-03-2016 ###
+<b>Lỗi MySQL Query</b> : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'm_id'' at line 1
+QUERY : UPDATE media_data SET m_title = "title", m_singer = "singer", m_album = "album", m_cat = "cat", m_type = '1', m_width = "width", m_height = "height", m_url = "url", m_is_local = "local_url", m_lyric = "lyric", m_title_ascii = 'similarities and differences between teachings of ' WHERE m_id = '$'m_id'
+### 23:33:26 29-04-2016 ###
+<b>Lỗi MySQL Query</b> : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't you remember ' WHERE m_id = '2'' at line 1
+QUERY : UPDATE media_data SET m_title = "Don't You Remember ", m_singer = "1", m_album = "0", m_cat = "6", m_type = '1', m_url = "uploads/DontYouRemember-Adele.mp3", m_poster = "templates/default/images/m1.jpg", m_is_local = "", m_lyric = "", m_title_ascii = 'don't you remember ' WHERE m_id = '2'

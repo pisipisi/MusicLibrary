@@ -1,0 +1,68 @@
+		<section id="content">
+          <section class="vbox" id="bjax-el">
+            <section class="scrollable wrapper-lg">
+              <div class="row">
+                <div class="col-sm-8">
+                  <div class="panel wrapper-lg">
+                    <div class="row">
+                      <div class="col-sm-5">
+                        <img src="{playlist.IMG}" class="img-full m-b">
+                      </div>
+                      <div class="col-sm-7">
+                        <h2 class="m-t-none text-black">{playlist.NAME}</h2>
+                        <div class="m-b-lg">
+                          <a href="javascript:;" data-id="{playlist.DATA}" class="play-me btn btn-default btn-icon">
+									    <i class="fa fa-play text"></i>
+									    <i class="fa fa-pause text-active"></i>
+									  </a> 
+							<div class="btn-group">
+										<a href="#" class="btn btn-default" data-toggle="dropdown">Share <span class="caret"></span></a>
+										<ul class="dropdown-menu">
+											<li>
+											<a href="http://twitter.com/home?status=Check+this+out%3A+http%3A%2F%2Fflatfull.com%2Fwp%2Fmusik%2Fmusic%2Ftop-board-june%2F" title="Share Top Board &#8211; June on Twitter">Share on Twitter</a>
+											</li>
+											<li>
+											<a href="https://plus.google.com/share?url=http%3A%2F%2Fflatfull.com%2Fwp%2Fmusik%2Fmusic%2Ftop-board-june%2F" title="Add Top Board &#8211; June to Google Plus">Add to Google+</a>
+											</li>
+											<li>
+											<a href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fflatfull.com%2Fwp%2Fmusik%2Fmusic%2Ftop-board-june%2F&t=Check+this+out" title="Share Top Board &#8211; June on Facebook">Share on Facebook</a></li>
+											</ul>
+									</div>
+                        </div>
+                        <div>
+                          Tags: <a href="#" class="badge bg-light">Musik</a> <a href="#" class="badge bg-light">Pashion</a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- BEGIN info_songs -->
+                    <h4 class="m-t-lg m-b">Play List</h4>
+                    <ul class="list-group list-group-lg">
+                    <!-- BEGIN list --> 
+					<!-- #BEGIN list_row -->
+                      <li class="list-group-item">
+                        <div class="pull-right m-l">
+                          <a href="index.php?act=Download&id={song.ID}" class="m-r-sm"><i class="icon-cloud-download"></i></a>
+                          <a href="javascript:;" data-c-id="1{song.ID}" data-toggle="tooltip" title="Add to playlist" class="playlist-me"><i class="icon-plus"></i></a>
+                        </div>
+                        <a href="#" data-toggle="class" data-id="1{song.ID}" class="play-me m-r-sm pull-left">
+                          <i class="icon-control-play text"></i>
+                          <i class="icon-control-pause text-active"></i>
+                        </a>
+                        <div class="clear text-ellipsis">
+                          <a href="index.php?act=song&id={song.ID}"><span>{song.TITLE}</span></a>
+                          <span class="text-muted"> -- {song.VIEWED}</span>
+                        </div>
+                      </li>
+                    <!-- #END list_row -->
+					<!-- END list -->
+					 <!-- END info_songs -->
+                    </ul>
+                    
+                  </div>
+                </div>
+                <!-- BOX box_top_media('Play') -->   
+              </div>
+            </section>
+          </section>
+          <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+        </section>

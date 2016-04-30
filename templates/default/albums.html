@@ -1,0 +1,37 @@
+            <section class="w-f-md" id="bjax-target">
+              <section class="hbox stretch">
+                <section>
+                  <section class="vbox">
+                    <section class="scrollable padder-lg">
+                      <h2 class="font-thin m-b">{CAT_TITLE}</h2>
+                      <div class="row row-sm">
+                      	<!-- BEGIN list --> 
+						<!-- #BEGIN list_row -->
+                    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="item">
+                        <div class="pos-rlt">
+                          <div class="item-overlay opacity r r-2x bg-black">
+                            <div class="center text-center m-t-n">
+                              <a href="javascript:;" data-toggle="class" data-id="{album.ID}" class="play-me i-lg">
+	            				<i class="icon-control-play text"></i>
+	            				<i class="icon-control-pause text-active"></i>
+	          					</a>
+                            </div>
+                          </div>
+                          <a href="#"><img src="{album.IMG}" alt="" class="r r-2x img-full"></a>
+                        </div>
+                        <div class="padder-v">
+                          <a href="{album.URL}" class="text-ellipsis">{album.NAME}</a>
+                          <a href="{singer.URL}" class="text-ellipsis text-xs text-muted">{singer.NAME}</a>
+                        </div>
+                      </div>
+                    </div>
+                        <!-- #END list_row -->
+						<!-- END list -->
+                      </div>
+                      {VIEW_PAGES}
+                    </section>                    
+                  </section>
+                 </section>
+              </section>
+            </section>

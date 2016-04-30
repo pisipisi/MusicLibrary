@@ -1,0 +1,136 @@
+    <footer class="footer nav-bar-fixed-bottom bg-white">
+  <div id="jp_container">
+    <div class="jp-type-playlist">
+      <div id="jplayer" class="jp-jplayer hide"></div>
+      <div class="jp-gui">
+        <div class="jp-video-play hide">
+          <a class="jp-video-play-icon">play</a>
+        </div>
+        <div class="jp-interface">
+          <div class="jp-controls">
+            <div><a class="jp-previous"><i class="icon-control-rewind i-lg"></i></a></div>
+            <div>
+              <a class="jp-play"><i class="icon-control-play i-2x"></i></a>
+              <a class="jp-pause hid"><i class="icon-control-pause i-2x"></i></a>
+            </div>
+            <div><a class="jp-next"><i class="icon-control-forward i-lg"></i></a></div>
+            <div class="hide"><a class="jp-stop"><i class="fa fa-stop"></i></a></div>
+            <div><a class="" data-toggle="dropdown" data-target="#playlist"><i class="icon-list"></i></a></div>
+            <div class="jp-progress hidden-xs">
+              <div class="jp-seek-bar lt">
+                <div class="jp-play-bar dk">
+                </div>
+              </div>
+              <div class="jp-title text-lt">
+              </div>
+            </div>
+            <div class="hidden-xs hidden-sm jp-current-time text-xs text-muted"></div>
+            <div class="hidden-xs hidden-sm jp-duration text-xs text-muted"></div>
+            <div class="hidden-xs hidden-sm">
+              <a class="jp-mute" title="mute"><i class="icon-volume-2"></i></a>
+              <a class="jp-unmute hid" title="unmute"><i class="icon-volume-off"></i></a>
+            </div>
+            <div class="hidden-xs hidden-sm jp-volume">
+              <div class="jp-volume-bar dk">
+                <div class="jp-volume-bar-value lter"></div>
+              </div>
+            </div>
+            <div>
+              <a class="jp-shuffle" title="shuffle"><i class="icon-shuffle text-muted"></i></a>
+              <a class="jp-shuffle-off hid" title="shuffle off"><i class="icon-shuffle text-lt"></i></a>
+            </div>
+            <div>
+              <a class="jp-repeat" title="repeat"><i class="icon-loop text-muted"></i></a>
+              <a class="jp-repeat-off hid" title="repeat off"><i class="icon-loop text-lt"></i></a>
+            </div>
+            <div class="hide">
+              <a class="jp-full-screen" title="full screen"><i class="fa fa-expand"></i></a>
+              <a class="jp-restore-screen" title="restore screen"><i class="fa fa-compress text-lt"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="jp-playlist dropup" id="playlist">
+        <ul class="dropdown-menu aside-xl dker">
+          <!-- The method Playlist.displayPlaylist() uses this unordered list -->
+          <li class="list-group-item"></li>
+        </ul>
+      </div>
+      <div class="jp-no-solution hide">
+        <span>Update Required</span>
+        To play the media you will need to either update your browser to a recent version or update your Flash plugin.      </div>
+    </div>
+  </div>
+</footer>
+          </section>
+          <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+        </section>
+      
+      </section>
+    </section>  
+  </section>
+  
+   <div class="modal fade" tabindex="-1" role="dialog" id="playlists">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="inline m-r-xs m-t-xs">&times;</span></button>
+        <h4 class="modal-title font-bold">Add to playlist</h4>
+      </div>
+      <div class="modal-body">
+        <div class="padder">
+          <div id="playlist-list" class="m-b">
+
+          </div>
+
+          <div id="playlist-new">
+            <h4 class="m-b-md">Create new</h4>
+            <div class="form-group">
+              <label>Playlist title</label>
+              <input type="text" class="form-control input-sm text-md" id="playlist-new-title">
+            </div>
+            <button type="button" class="btn btn-sm btn-default m-b-md font-bold btn-danger" id="playlist-new-save">Save</button>
+          </div>
+
+          <div id="playlist-error" class="hide">
+            <h4>Someting went wrong, try later</h4>
+          </div>
+        </div>
+        <div class="hide" id="playlist-list-item">
+          <div class="playlist-list-item padder-v b-b clearfix">
+            <div class="pull-right m-t-xs">
+              <button class="btn btn-sm btn-default" id="playlist-add">Add to playlist</button>
+              <button class="btn btn-sm btn-danger" id="playlist-del" style="display:none">Added</button>
+              <button class="btn btn-sm btn-link" id="playlist-remove" title="Remove"><i class="fa fa-remove"></i></button>
+            </div>
+            <a href class="pull-left m-r" id="playlist-thumb"><img width="40"></a>
+            <div class="clear">
+              <a href id="playlist-title" class="font-bold"></a>
+              <div id="playlist-count" class="text-muted"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="{TPL_LINK}/js/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="{TPL_LINK}/js/bootstrap.js"></script>
+  <!-- App -->
+  <script type="text/javascript" src="{TPL_LINK}/js/app.js"></script>  
+  <script type="text/javascript" src="{TPL_LINK}/js/slimscroll/jquery.slimscroll.min.js"></script>
+  <script type="text/javascript" src="{TPL_LINK}/js/app.plugin.js"></script>
+  <script type="text/javascript" src="{TPL_LINK}/js/jPlayer/jquery.jplayer.min.js"></script>
+  <script type="text/javascript" src="{TPL_LINK}/js/jPlayer/add-on/jplayer.playlist.min.js"></script>
+  <script type="text/javascript" src="{TPL_LINK}/js/jquery.storageapi.min.js"></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ajax_object = {"ajaxurl":"http:\/\/localhost\/music\/index.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='{TPL_LINK}/js/jPlayer/player.js'></script>
+<script type='text/javascript' src='{TPL_LINK}/js/jPlayer/playlist.js'></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<section class="w-f-md" id="ajax-container">
+    <section class="hbox stretch">
+        <section>
+            <section class="vbox">
+                <section class="scrollable wrapper-lg">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <div class="panel wrapper-md">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                       <img src="{singer.IMG}" alt="James Garcia" class="img-full m-b"/>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <h1 class="m-t-none m-b text-black h2">{singer.NAME}</h1>
+                                        <p>{singer.INFO}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- BEGIN info_songs -->
+                            <h4 class="m-t-lg m-b">Play List</h4>
+                    		<ul class="list-group list-group-lg">
+                    		<!-- BEGIN list --> 
+							<!-- #BEGIN list_row -->
+                      		<li class="list-group-item">
+                        		<div class="pull-right m-l">
+                          			<a href="index.php?act=Download&id={song.ID}" class="m-r-sm"><i class="icon-cloud-download"></i></a>
+                          			<a href="#"><i class="icon-plus"></i></a>
+                        		</div>
+                        		<a href="#" data-toggle="class" data-id="1{song.ID}" class="play-me m-r-sm pull-left">
+                          		<i class="icon-control-play text"></i>
+                          		<i class="icon-control-pause text-active"></i>
+                        		</a>
+                        		<div class="clear text-ellipsis">
+                          			<span>{song.TITLE}</span>
+                          			<span class="text-muted"> -- {song.VIEWED}</span>
+                        		</div>
+                      		</li>
+                    		<!-- #END list_row -->
+							<!-- END list -->
+							<!-- END info_songs -->
+                    	</ul>
+                            
+                            
+                         </div>
+                        <!-- BOX box_topsinger() -->   
+                    </div>
+                </section>
+            </section>
+        </section>
+    </section>
+</section>

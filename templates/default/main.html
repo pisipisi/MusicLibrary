@@ -1,0 +1,138 @@
+
+            <section class="w-f-md" id="bjax-target">
+              <section class="hbox stretch">
+            <section>
+              <section class="vbox">
+                <section class="scrollable padder-lg w-f-md" id="bjax-target">
+                  <a href="#" class="pull-right text-muted m-t-lg" data-toggle="class:fa-spin" ><i class="icon-refresh i-lg  inline" id="refresh"></i></a>
+                  <h2 class="font-thin m-b">Discover <span class="musicbar animate inline m-l-sm" style="width:20px;height:20px">
+                    <span class="bar1 a1 bg-primary lter"></span>
+                    <span class="bar2 a2 bg-info lt"></span>
+                    <span class="bar3 a3 bg-success"></span>
+                    <span class="bar4 a4 bg-warning dk"></span>
+                    <span class="bar5 a5 bg-danger dker"></span>
+                  </span></h2>
+                  <div class="row row-sm">
+                  <!-- BEGIN random --> 
+					<!-- #BEGIN random.row -->
+                    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="item">
+                        <div class="pos-rlt">
+                          <div class="item-overlay opacity r r-2x bg-black">
+                            <div class="text-info padder m-t-sm text-sm">
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star-o text-muted"></i>
+                            </div>
+                            <div class="center text-center m-t-n">
+                              <a href="#" data-toggle="class" data-id="1{song.ID}" class="play-me">
+                              <i class="icon-control-play i-2x text"></i>
+                              <i class="icon-control-pause i-2x text-active"></i>
+                              </a>
+                            </div>
+                            <div class="bottom padder m-b-sm">
+                              <a href="#" class="pull-right" data-toggle="class">
+                                <i class="fa fa-heart-o text"></i>
+                                <i class="fa fa-heart text-active text-danger"></i>
+                              </a>
+                              <a href="javascript:;" data-c-id="1{song.ID}" data-toggle="tooltip" title="Add to playlist" class="playlist-me">
+                                <i class="fa fa-plus-circle"></i>
+                              </a>
+                            </div>
+                          </div>
+                          <a href="#"><img src="{song.IMG}" alt="" class="r r-2x img-full"></a>
+                        </div>
+                        <div class="padder-v">
+                          <a href="{song.URL}" class="text-ellipsis">{song.TITLE}</a>
+                          <a href="{singer.URL}" class="text-ellipsis text-xs text-muted">{singer.NAME}</a>
+                        </div>
+                      </div>
+                    </div>
+                    {cleartag}
+                    <!-- #END random.row -->
+					<!-- END random --> 
+
+                    
+                    
+                  </div>
+                  <!-- BEGIN info_songs -->
+                  <div class="row">
+                    <div class="col-md-7">
+                      <h3 class="font-thin">New Songs</h3>
+                      <div class="row row-sm">
+                      	<!-- BEGIN newsong --> 
+						<!-- #BEGIN newsong.row -->
+                        <div class="col-xs-6 col-sm-3">
+                          <div class="item">
+                            <div class="pos-rlt">
+                              <div class="item-overlay opacity r r-2x bg-black">
+                                <div class="center text-center m-t-n">
+                              		<a href="#" data-toggle="class" data-id="1{song.ID}" class="play-me">
+                              		<i class="icon-control-play i-2x text"></i>
+                              		<i class="icon-control-pause i-2x text-active"></i>
+                              		</a>
+                            	</div>
+                              </div>
+                              <a href="#"><img src="{song.IMG}" alt="" class="r r-2x img-full"></a>
+                            </div>
+                            <div class="padder-v">
+                              <a href="{song.URL}" class="text-ellipsis">{song.TITLE}</a>
+                              <a href="{singer.URL}" class="text-ellipsis text-xs text-muted">{singer.NAME}</a>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- #END newsong.row -->
+						<!-- END newsong --> 
+						<!-- END info_songs -->
+                      </div>
+                    </div>
+                    <div class="col-md-5">
+                      <h3 class="font-thin">Top Songs</h3>
+                      <div class="list-group bg-white list-group-lg no-bg auto">   
+                       	<!-- BEGIN topsong --> 
+						<!-- #BEGIN topsong.row -->                      
+                        <a href="{song.URL}" class="list-group-item clearfix">
+                          <span class="pull-right h2 text-muted m-l">{song.NUM}</span>
+                          <span class="pull-left thumb-sm avatar m-r">
+                            <img src="{song.IMG}" alt="...">
+                          </span>
+                          <span class="clear">
+                            <span>{song.TITLE}</span>
+                            <small class="text-muted clear text-ellipsis">by {singer.NAME}</small>
+                          </span>
+                        </a>
+                        <!-- #END topsong.row -->
+						<!-- END topsong -->
+                     </div>
+                    </div>
+                  </div>
+                  <div class="row m-t-lg m-b-lg">
+                    <div class="col-sm-6">
+                      <div class="bg-primary wrapper-md r">
+                        <a href="index.php?act=login">
+                          <span class="h4 m-b-xs block"><i class=" icon-user-follow i-lg"></i> Login or Create account</span>
+                          <span class="text-muted">Save and share your playlist with your friends when you log in or create an account.</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="bg-black wrapper-md r">
+                        <a href="#">
+                          <span class="h4 m-b-xs block"><i class="icon-cloud-download i-lg"></i> Download our app</span>
+                          <span class="text-muted">Get the apps for desktop and mobile to start listening music at anywhere and anytime.</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </section>
+            </section>
+              	<!-- side content -->            
+              	<!-- BOX box_user_online() -->            
+            	<!-- / side content -->
+            </section>
+
+            </section>
+  

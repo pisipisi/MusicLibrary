@@ -1,0 +1,20 @@
+				<div class="col-sm-4">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">{box.Name}</div>
+                    <div class="panel-body">
+                    	<!-- BEGIN topfive -->
+						<!-- #BEGIN topfive.row -->
+                      <article class="media">
+                        <a href="#" class="pull-left thumb-md m-t-xs">
+                          <img src="{song.IMG}">
+                        </a>
+                        <div class="media-body">                        
+                          <a href="{song.URL}" class="font-semibold">{song.TITLE}</a>
+                          <div class="text-xs block m-t-xs">by <a href="index.php?act=singers&id={singer.ID}">{singer.NAME}</a></div>
+                        </div>
+                      </article>
+                      	<!-- #END topfive.row -->
+						<!-- END topfive -->
+                    </div>
+                  </div>
+                </div>

@@ -1,0 +1,25 @@
+<!-- side content -->
+                <aside class="aside bg-light dk" id="sidebar">
+                  <section class="vbox animated fadeInUp">
+                    <section class="scrollable hover">
+                      <div class="list-group no-radius no-border no-bg m-t-n-xxs m-b-none auto">
+                        <a href="index.php?act=genres" class="list-group-item">
+                          All
+                        </a>
+                        <!-- BEGIN cat_list -->
+						<!-- #BEGIN cat_list.parent -->
+                        <a href="{cat_parent.URL}" class="list-group-item {cat_parent.ACTIVE}">
+                          {cat_parent.NAME}
+                        </a>
+                        <!-- #END cat_list.parent -->
+						<!-- #BEGIN cat_list.sub -->
+                        <a href="{cat_sub.URL}" class="list-group-item {cat_sub.ACTIVE}">
+                          --{cat_sub.NAME}
+                        </a>
+                        <!-- #END cat_list.sub -->
+						<!-- END cat_list -->
+                      </div>
+                    </section>
+                  </section>
+                </aside>
+                <!-- / side content -->
