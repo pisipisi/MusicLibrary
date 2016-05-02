@@ -10,6 +10,15 @@
                       </div>
                       <div class="col-sm-7">
                         <h2 class="m-t-none text-black">{playlist.NAME}</h2>
+                        <div class="clearfix m-b-lg">
+                          <a href="#" class="thumb-sm pull-left m-r">
+                            <img src="{TPL_LINK}/images/a0.png" class="img-circle">
+                          </a>
+                          <div class="clear">
+                            <a href="#" class="text-info">{user.NAME}</a>
+                            <small class="block text-muted">0 followers / 0 following</small>
+                          </div>
+                        </div>
                         <div class="m-b-lg">
                           <a href="javascript:;" data-id="{playlist.DATA}" class="play-me btn btn-default btn-icon">
 									    <i class="fa fa-play text"></i>
@@ -19,13 +28,13 @@
 										<a href="#" class="btn btn-default" data-toggle="dropdown">Share <span class="caret"></span></a>
 										<ul class="dropdown-menu">
 											<li>
-											<a href="http://twitter.com/home?status=Check+this+out%3A+http%3A%2F%2Fflatfull.com%2Fwp%2Fmusik%2Fmusic%2Ftop-board-june%2F" title="Share Top Board &#8211; June on Twitter">Share on Twitter</a>
+											<a href="http://twitter.com/home?status=Check+this+out%3A+{playlist.SURL}" title="Share Top Board &#8211; June on Twitter">Share on Twitter</a>
 											</li>
 											<li>
-											<a href="https://plus.google.com/share?url=http%3A%2F%2Fflatfull.com%2Fwp%2Fmusik%2Fmusic%2Ftop-board-june%2F" title="Add Top Board &#8211; June to Google Plus">Add to Google+</a>
+											<a href="https://plus.google.com/share?url={playlist.SURL}" title="Add Top Board &#8211; June to Google Plus">Add to Google+</a>
 											</li>
 											<li>
-											<a href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fflatfull.com%2Fwp%2Fmusik%2Fmusic%2Ftop-board-june%2F&t=Check+this+out" title="Share Top Board &#8211; June on Facebook">Share on Facebook</a></li>
+											<a href="http://www.facebook.com/sharer.php?u={playlist.SURL}" title="Share Top Board &#8211; June on Facebook">Share on Facebook</a></li>
 											</ul>
 									</div>
                         </div>
@@ -50,7 +59,7 @@
                         </a>
                         <div class="clear text-ellipsis">
                           <a href="index.php?act=song&id={song.ID}"><span>{song.TITLE}</span></a>
-                          <span class="text-muted"> -- {song.VIEWED}</span>
+                          <span class="text-muted"> -  <a href="{singer.URL}">{singer.NAME}</a> - Viewed: {song.VIEWED}</span>
                         </div>
                       </li>
                     <!-- #END list_row -->

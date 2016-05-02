@@ -36,7 +36,7 @@ function m_refresh() {
 	exit();
 }
 
-function m_setcookie($name, $value = '', $permanent = true) {
+function m_setcookie($name, $value = '', $permanent = false) {
 	global $mainURL, $setCookieType;
 	
 	$expire = ($permanent)?(time() + 60 * 60 * 24 * 365):0;

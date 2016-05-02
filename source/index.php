@@ -58,17 +58,8 @@ elseif (isset($_POST['change_info']) && $isLoggedIn) {
 elseif (isset($_POST['forgot']) && isset($_POST['email'])) {
 	include('user.php');
 	exit();
-}
-elseif (isset($_POST['reloadPlaylist'])) {
-	include('playlist.php');
-	exit();
-}
-
-$value = array();
-
-
-
-if (($_GET['act'] == 'Download') && is_numeric($_GET['id'])) {
+	
+} elseif (($_GET['act'] == 'Download') && is_numeric($_GET['id'])) {
 	if (!$isLoggedIn && m_get_config('must_login_to_download')) {
 		header("Content-Disposition: attachment; filename = You_must_login.txt");
 		echo "You must login to download";
@@ -85,18 +76,16 @@ if (($_GET['act'] == 'Download') && is_numeric($_GET['id'])) {
 			readfile($file);
 		}
 		exit();
+} else {
+	include ('main.php');
+	exit();
 }
+
 if($_COOKIE['MEDIA_TPL']) {
-$_SESSION['current_tpl'] = $_COOKIE['MEDIA_TPL'];
+$_SESSION['current_tpl'] = 'default';
 } else {
 	$_SESSION['current_tpl'] = 'default';
 }
 
-
-if (!$url) {
-	//loadPage($tpl->get_tpl('main'));
-	include ('main.php');
-	exit();
-}
 
 ?>

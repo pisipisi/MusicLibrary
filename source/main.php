@@ -1,6 +1,33 @@
 <?php 
 
 if (!defined('IN_MEDIA')) die("Hacking attempt");
+
+// ONLINE
+if (!$isLoggedIn) {
+	$num = $mysql->num_rows($mysql->query("SELECT sid FROM ".$tb_prefix."online WHERE sid = '".SID."'"));
+	if ($num == 0) $mysql->query("INSERT INTO ".$tb_prefix."online (timestamp, sid, ip) VALUES ('".NOW."', '".SID."', '".IP."')");
+	else $mysql->query("UPDATE ".$tb_prefix."online SET timestamp='".NOW."',ip='".IP."' WHERE sid='".SID."'");
+}
+// TEMPLATE
+if (!$_COOKIE['MEDIA_TPL'] || $_GET['reset_tpl'] == '1') {
+	$default_tpl = m_get_config('default_tpl');
+	m_setcookie('MEDIA_TPL', $default_tpl);
+	$_COOKIE['MEDIA_TPL'] = $default_tpl;
+	if ($reset_tpl) m_refresh();
+}
+if ($change_tpl) {
+	if ($tpl_name)
+		m_setcookie('MEDIA_TPL', $tpl_name);
+		m_refresh();
+}
+$month = date('m',NOW);
+$current_month = m_get_config('current_month');
+if ($month != $current_month) {
+	$mysql->query("UPDATE ".$tb_prefix."data SET m_viewed_month = 0, m_downloaded_month = 0");
+	$mysql->query("UPDATE ".$tb_prefix."config SET config_value = ".$month." WHERE config_name = 'current_month'");
+}
+
+
 $html =$tpl->get_tpl('main');
 
 //$t['row'] = $tpl->get_block_from_str($html,'list_row',1);

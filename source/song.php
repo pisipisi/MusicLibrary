@@ -14,6 +14,7 @@ if (!defined('IN_MEDIA')) die("Hacking attempt");
 $html = $tpl->get_tpl('info');
 $t['row'] = $tpl->get_block_from_str($html,'list_row',1);
 $r = $mysql->fetch_array($mysql->query("SELECT * FROM ".$tb_prefix."data WHERE m_id = ".$_GET['id']));
+$song_page = '/index.php?act=song&id=';
 $html = $tpl->assign_vars($html,
 		array(
 				'info.ID'		=> $r['m_id'],
@@ -21,6 +22,7 @@ $html = $tpl->assign_vars($html,
 				'info.IMG'		=> $r['m_poster'],
 				'info.INFO'	=> $r['m_lyric'],
 				'info.NAME'	=> $r['m_title'],
+				'info.SURL' => urlencode(m_get_config('web_url').$song_page.$r['album_id']),
 				'singer.URL'	=> '?act=singers&id='.$r['m_singer'],
 				'singer.NAME'	=> m_get_data('SINGER',$r['m_singer']),
 					

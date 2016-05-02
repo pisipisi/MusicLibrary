@@ -15,13 +15,15 @@ if (!defined('IN_MEDIA')) die("Hacking attempt");
 						'playlist.DATA'		=> '3'.$r['playlist_id'],
 						'playlist.IMG'		=> $r['playlist_thumb'],
 						'playlist.NAME'		=> $r['playlist_title'],
+						'playlist.SURL'		=> urlencode(m_get_config('web_url').'/index.php?act=showpl&id='.$r['playlist_id']),
+						'user.NAME'			=> m_get_data('USER', $r['playlist_user_id']),
 							
 				)
 				);
 		if($songs) {
 			foreach ($songs as $song) {
 				$gid =  substr($song, 1);
-				$q = $mysql->query("SELECT m_id, m_title, m_type, m_viewed, m_downloaded FROM ".$tb_prefix."data WHERE m_id = '".intval($gid)."'");
+				$q = $mysql->query("SELECT m_id, m_title, m_type, m_viewed, m_downloaded, m_singer FROM ".$tb_prefix."data WHERE m_id = '".intval($gid)."'");
 				$rz = $mysql->fetch_array($q);
 				$list .= $tpl->assign_vars($t['row'],
 					array(
@@ -30,6 +32,8 @@ if (!defined('IN_MEDIA')) die("Hacking attempt");
 							'song.TITLE' => $rz['m_title'],
 							'song.VIEWED' => $rz['m_viewed'],
 							'song.DOWNLOADED' => $rz['m_downloaded'],
+							'singer.NAME'		=> m_get_data('SINGER', $rz['m_singer']),
+							'singer.URL'	=> 'index.php?act=singer&id='.$rz['m_singer'],
 					)
 					);
 			}

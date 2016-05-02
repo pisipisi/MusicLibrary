@@ -17,6 +17,7 @@ if ($_GET['act'] == "album" && is_numeric($_GET['id'])) {
 	$t['row'] = $tpl->get_block_from_str($html,'list_row',1);
 	$r = $mysql->fetch_array($mysql->query("SELECT * FROM ".$tb_prefix."album WHERE album_id = ".$_GET['id']));
 	$album_img = m_get_img('Album',$r['album_img']);
+	$album_page = '/index.php?act=album&id=';
 	$html = $tpl->assign_vars($html,
 		array(
 			'info.ID'		=> $r['album_id'],
@@ -24,7 +25,7 @@ if ($_GET['act'] == "album" && is_numeric($_GET['id'])) {
 			'info.IMG'		=> $album_img,
 			'info.INFO'	=> $r['album_info'],
 			'info.NAME'	=> $r['album_name'],
-			'album.PLAY_URL'	=> '#Play_Album,'.$r['album_id'],
+			'info.SURL' => urlencode(m_get_config('web_url').$album_page.$r['album_id']),
 			'singer.URL'	=> '?act=singers&id='.$r['album_singer'],
 			'singer.NAME'	=> m_get_data('SINGER',$r['album_singer']),
 			
